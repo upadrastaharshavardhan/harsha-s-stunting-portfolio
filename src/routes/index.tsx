@@ -392,7 +392,7 @@ function Section({ id, num, title, children }: { id: string; num: string; title:
   );
 }
 
-function Info({ icon: Icon, label, value }: { icon: import("lucide-react").LucideIcon; label: string; value: string }) {
+function Info({ icon: Icon, label, value }: { icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>; label: string; value: string }) {
   return (
     <div className="flex items-start gap-3">
       <Icon className="text-cyan mt-0.5 shrink-0" size={16} />
@@ -404,7 +404,7 @@ function Info({ icon: Icon, label, value }: { icon: import("lucide-react").Lucid
   );
 }
 
-function ConnectCard({ href, icon: Icon, label, sub, c }: { href: string; icon: import("lucide-react").LucideIcon; label: string; sub: string; c: string }) {
+function ConnectCard({ href, icon: Icon, label, sub, c }: { href: string; icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>; label: string; sub: string; c: string }) {
   return (
     <a href={href} target="_blank" rel="noopener"
        className="card-surface rounded-2xl p-6 text-center transition hover:-translate-y-1 group"
